@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Unit extends Model
+class Event extends Model
 {
     use HasFactory;
-
-    public function director()
-    {
-        return $this->hasOne(Director::class);
-    }
 }

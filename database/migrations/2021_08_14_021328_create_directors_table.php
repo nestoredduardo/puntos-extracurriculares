@@ -15,7 +15,16 @@ class CreateDirectorsTable extends Migration
     {
         Schema::create('directors', function (Blueprint $table) {
             $table->id();
+
+            $table->bigInteger('unit_id')->unsigned();
+
+            $table->string('name');
+            $table->string('email')->unique();;
+
             $table->timestamps();
+
+            $table->foreign('unit_id')->references('id')->on('units')
+                ->onUpdate('cascade');
         });
     }
 
