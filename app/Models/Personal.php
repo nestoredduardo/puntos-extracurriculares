@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Personal extends Model
 {
     use HasFactory;
+
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
+    }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }

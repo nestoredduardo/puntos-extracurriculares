@@ -13,4 +13,9 @@ class Unit extends Model
     {
         return $this->hasOne(Director::class);
     }
+
+    public function personals()
+    {
+        return $this->hasMany(Personal::class);
+    }
 }
