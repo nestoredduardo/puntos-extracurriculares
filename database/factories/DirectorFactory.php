@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Director;
+use Faker\Guesser\Name;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class DirectorFactory extends Factory
@@ -22,7 +23,9 @@ class DirectorFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'unit_id' => 1,
+            'email' => $this->faker->email()
         ];
     }
 }

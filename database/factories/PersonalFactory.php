@@ -22,7 +22,9 @@ class PersonalFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'unit_id' => 1,
+            'email' => $this->faker->email()
         ];
     }
 }
